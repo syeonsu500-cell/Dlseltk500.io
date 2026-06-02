@@ -15,16 +15,3 @@ readme_content = """
 
 with open('README.md', 'w', encoding='utf-8') as f:
     f.write(readme_content)
-
-# 2. 업로드할 파일 리스트 확인
-files_to_upload = ['index.html', 'parking_data_geo.csv', 'gangnam_towing_geo.csv', 'README.md']
-
-print("--- 깃허브 저장소에 업로드할 파일 목록 ---")
-for file in files_to_upload:
-    if os.path.exists(file):
-        print(f"✅ 준비됨: {file}")
-    else:
-        print(f"❌ 누락됨: {file} (이전 단계 코드를 다시 실행해주세요)")
-
-print("\n위 파일들을 다운로드하여 깃허브 저장소(main 브랜치)에 업로드하신 후,")
-print("Settings > Pages 메뉴에서 Build and deployment의 Branch를 'main'으로 설정하면 웹페이지가 배포됩니다.")
